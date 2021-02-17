@@ -1,0 +1,695 @@
+/*=============================================
+    Templat name: Paul Lapkin - portfolio Tamplate
+    Template URI: yousuf-islam.me
+    Author: Yousuf
+    Support: online.okk@gmail.com
+    Version: 1.0.0
+
+===============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
+/*=============================================
+    CSS INDEX
+    ---------
+===============================================*/
+
+/*===================================
+    1. COMMON CSS
+    2. HERO
+    3. ABOUT
+    4. PROCESS
+    5. EXPERIENCE
+    6. PORTFOLIO
+    7.TESTIMONIAL
+===================================== */
+/* ============================
+     1.  COMMON CSS
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #fff;
+    border-radius: 10px;
+}
+
+html,
+body{
+    background: #fff;
+    color: #000;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 650%;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    margin-top: 0;
+}
+
+h4 {
+    font-size: 160%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+}
+.btn:link,
+.btn:visited {
+    width: 185px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 160%;
+    color: #fff;
+    background: #ff2b4a;
+    display: inline-block;
+    border: 2px solid #ff2b4a;
+    transition: .4s ;
+}
+
+.btn:hover,
+.btn:active {
+    color: #ff2b4a;
+    background: transparent;
+
+}
+
+section {
+    padding: 100px 0;
+}
+
+.row {
+    width: 1180px;
+    margin: auto;
+}
+
+.portfolio-img {
+	object-fit: cover;
+    
+}
+
+[class*="uk-inline"] {
+    display: block;
+}
+
+.uk-link, a {
+    color: #fff;
+}
+
+/*===================================
+    2. HERO
+===================================== */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.8)), url("img/hero.jpg") no-repeat center / cover;
+    overflow: hidden;
+
+}
+
+.logo {
+    height: 40px;
+    margin-top: 45px;
+    float: left;
+}
+
+.nav-icon {
+    float: right;
+    font-size: 400%;
+    margin-top: 45px;
+    color: #fff;
+    border: 2px solid #fff;
+    display: flex;
+
+}
+
+.uk-active {
+    background: rgba(0,0,0,0.7);
+}
+
+.uk-active .logo,
+.uk-active .nav-icon {
+    margin: 15px 0;
+}
+
+.hero-text-box {
+    width: 540px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text-box h1 {
+    font-size: 650%;
+}
+
+
+h1::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin: auto;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin: auto;
+}
+
+.hero-text-box span {
+    font-size: 200%;
+    margin-top: 25px;
+    display: block;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    width: 50px;
+    margin: auto;
+
+}
+
+.scroll-down a {
+    font-size: 300%;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 25%;
+    -webkit-animation: 2s yousuf infinite ease;
+            animation: 2s yousuf infinite ease;
+    position: relative;
+   
+}
+
+@-webkit-keyframes yousuf {
+    0% {
+        top: 10px;
+    }
+
+    50% {
+        top: 40px;
+    }
+
+    100% {
+        top: 10px; 
+    }
+}
+
+@keyframes yousuf {
+    0% {
+        top: 10px;
+    }
+
+    50% {
+        top: 40px;
+    }
+
+    100% {
+        top: 10px; 
+    }
+}
+
+.menu_container {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.9);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.menu_container .close-menu ion-icon {
+    font-size: 400%;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.menu_items {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu_items ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_items ul li {
+    list-style: none;
+    text-align: center;
+    margin: 15px 0;
+
+}
+
+.menu_items ul li a {
+    color: #fff;
+    font-size: 300%;
+    text-transform: capitalize;
+    transition: .5s;
+}
+
+.menu_items ul li:hover a {
+    color: #ff2b4a;
+    font-size: 320%;
+    display: block;
+}
+/*===================================
+    3. ABOUT
+===================================== */
+
+
+.grid-about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+}
+
+.busniassman {
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.grid-about-items h2,
+.grid-about-items p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-about-items h2 {
+    font-size: 180%;
+    font-weight: 700;
+    color: #222;
+}
+
+.grid-about-items p {
+    font-size: 160%;
+    font-weight: 400;
+    margin: 30px 0;
+    width: 90%;
+}
+
+.btn-full {
+    margin-top: 50px;
+}
+
+/*===================================
+    4. PROCESS
+===================================== */
+
+#process {
+    background: #f6f6f6;
+    -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
+
+}
+
+.btn-radius {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.process-title {
+    text-align: center;
+}
+
+.process-title h2 {
+    font-size: 400%;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.process-title p {
+    font-size: 160%;
+
+}
+
+.grid-process-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.grit-process-items {
+    color: #fff;
+    font-size: 160%;
+    text-transform: uppercase;
+    padding: 100px 0;
+}
+
+.grit-process-items:nth-child(1){
+    background: #10c6fc ;
+}
+.grit-process-items:nth-child(2){
+    background: #835aeb ;
+}
+.grit-process-items:nth-child(3){
+    background: #002453 ;
+}
+.grit-process-items:nth-child(4){
+    background: #ff2b4a;
+}
+
+
+.grit-process-items svg {
+    font-size: 200%;
+    margin-bottom: 30px;
+}
+
+.grit-process-items h4 {
+    text-transform: capitalize;
+}
+/*===================================
+    5. EXPERIENCE
+===================================== */
+
+#experience {
+    background: url("img/business.jpg") no-repeat center / cover;
+    background-attachment: fixed;
+}
+
+.grid-experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-experience-items {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 45px 30px;
+}
+
+.grid-experience-items h2 {
+    font-size: 260%;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.grid-experience-items hr {
+    border: 0;
+    border: 1px solid #fff;
+    margin: 20px 0;
+}
+
+.job-desc-left h3,
+.job-desc-right h3 {
+    font-size: 180%;
+}
+
+.job-desc-left span,
+.job-desc-right span {
+    font-size: 160%;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.job-desc-left p,
+.job-desc-right p {
+    font-size: 160%;
+    opacity: .9;
+}
+
+/*===================================
+    6. PORTFOLIO
+===================================== */
+
+.section-title {
+    text-align: center;
+}   
+
+.section-title h2 {
+    font-size: 400%;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.section-title p {
+    font-size: 160%;
+    margin-bottom: 50px;
+}
+
+.portfolio-filter {
+    text-align: center;
+}
+
+.portfolio-filter button {
+    padding: 5px;
+    font-size: 160%;
+    margin: 20px 5px;
+    background: #0fbcf9;
+    color: #ffff;
+    border: 1px solid #000;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.portfolio-filter button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #000;
+}
+.grid-portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 250px;
+}
+.grid-portfolio-items {
+    width: 100%;
+
+}
+.portfolio-img {
+    width: 100%;
+    height: 250px;
+}
+
+.grid-portfolio-items:nth-child(5){
+    grid-column: 1/3;
+
+}
+
+.portfolio-filter .mixitup-control-active {
+    background: #7d5fff;
+}
+
+
+/*===================================
+    7.TESTIMONIAL
+===================================== */
+
+#testimonil {
+    background: url(img/testimonial.jpg) no-repeat center center / cover;
+    
+}
+
+.grid-testimonial-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap : 10px;
+}
+
+.quode {
+    font-size: 400%;
+    color: #317688;
+}
+
+.grid-testimonial-items p {
+    width: 450px;
+    font-size: 160%;
+    margin: 25px 0;
+}
+
+.sinature {
+    padding: 25px 0;
+}
+
+.grid-testimonial-items h3 {
+    font-size: 180%;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.grid-testimonial-items span {
+    font-size: 160%;
+}
+
+/*===================================
+    8.CONTACT
+===================================== */
+#contact {
+    background: url(img/contact.jpg) no-repeat center center / cover;
+}
+
+.grid-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-contact-items {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 45px 35px;
+    
+}
+
+.grid-contact-items h2 {
+    font-size: 260%;
+    padding: 20px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.single-item [type="text"],
+.single-item [type="email"],
+.single-item textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 160%;
+    background: transparent;
+    color: #fff;
+}
+
+.contact-btn {
+    text-align: right;
+    margin-top: 35px;
+}
+
+/* right site */
+
+.nested-contact-container {
+    display: grid;
+    grid-row-gap: 10px;
+    
+}
+
+.grid-nested-contact-items {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 45px 35px;
+}
+
+.grid-nested-contact-items h2 {
+    font-size: 260%;
+}
+
+.grid-nested-contact-items p {
+    font-size: 180%;
+    margin-top: 30px;
+}
+
+/*===================================
+    9.FOOTER
+===================================== */
+
+footer {
+    background: #222222;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.socil-icon ul li {
+    display: inline-block;
+}
+.socil-icon ul li a {
+    color: #fff;
+    font-size: 250%;
+    border-right: 1px solid #fff;;
+    padding:0 10px;
+    transition: .5s;
+}
+
+.socil-icon ul li a:hover{
+    color: #ff2b4a;
+}
+
+footer p {
+    font-size: 180%;
+    padding: 20px 0;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+.totop a.uk-totop {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    line-height: 3;
+	color: #ffffff;
+	transition: color .3s ease-in-out;
+    background: #ff2b4a;
+    border-radius: 50% 50% 10%;
+    border: 2px solid #ff2b4a;
+}
+
+.totop a.uk-totop:hover{
+    background: transparent;
+}
